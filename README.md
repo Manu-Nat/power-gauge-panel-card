@@ -2,6 +2,8 @@
 
 Scheda Lovelace personalizzata per visualizzare, per una o più stanze, quattro misure: energia, potenza, tensione e corrente. Supporta due impaginazioni (`quad` e `single`), soglie colore globali o per stanza e opzioni di dimensione e spaziatura.
 
+> A customizable Home Assistant Lovelace card for displaying live appliance energy, power, voltage, and current readings in glowing gauges. Supports single-circle and four-gauge layouts, multiple rooms, and configurable color thresholds.
+
 ## Esempi
 
 Le immagini mostrano entrambe le modalità: il layout `single` concentra i quattro valori in un cerchio; il layout `quad` mostra un cerchio separato per ciascuna misura.

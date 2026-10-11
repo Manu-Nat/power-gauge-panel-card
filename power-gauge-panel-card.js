@@ -1,5 +1,5 @@
 /**
- * power-gauge-panel-card.js  (v13)
+ * power-gauge-panel-card.js  (v14)
  * ---------------------------------------------------------------------
  * Due layout per ogni stanza (globale o per singola stanza):
  *   layout: quad    -> 4 cerchi (energia, potenza, tensione, corrente) a quadrato 2x2
@@ -271,7 +271,9 @@
           const get = (k) => pick(dev, this._config, k);
           const single = get('layout') === 'single';
           const c = Number(single ? get('single_size') : get('circle_size')) || (single ? 220 : 110);
-          h = Math.max(h, (single ? c : c * 2 + 10) + 60);
+          const rawQuadGap = Number(get('quad_gap'));
+          const quadGap = Number.isFinite(rawQuadGap) && rawQuadGap >= 0 ? rawQuadGap : 10;
+          h = Math.max(h, (single ? c : c * 2 + quadGap) + 60);
         });
         total += h + this._gap;
       }
